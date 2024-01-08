@@ -1,9 +1,14 @@
 // Déclarer et initialiser Dotenv
-const dotenv = require("dotenv").config();
+import dotenv from "dotenv";
+const result = dotenv.config();
 
 // Déclarer et initialiser Express
-const express = require('express');
+import express from "express";
 const app = express();
+
+// Déclarer et importer le router dans l'application express
+import routes from "./src/routes/crmRoutes.js";
+routes(app);
 
 // fonction middleware d'analyse du corps des requêtes de formulaire. (extended: true) permet de parser les objets et les tableaux.
 app.use(express.urlencoded({ extended: true }));
