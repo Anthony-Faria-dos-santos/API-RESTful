@@ -32,6 +32,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // fonction middleware d'analyse du corps des requêtes de formulaire. (extended: true) permet de parser les objets et les tableaux.
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // Déclarer le répertoire de fichiers statiques.
 app.use(express.static("public"));
 
