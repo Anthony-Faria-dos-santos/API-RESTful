@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 // Déclarer le répertoire de fichiers statiques.
 app.use(express.static("public"));
 
+// Test de routage de la page d'acceuil
 app.get("/", (req, res) => {
     res.send(`🟢  Server Node & Express has correctly been start on http://localhost:${PORT} `);
 });
